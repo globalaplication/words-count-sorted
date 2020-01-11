@@ -7,7 +7,7 @@ paragraf = open("paragraf").read().split()
 
 #kelimeleri say, sozluge ekle {"bilgisayar":5}
 
-[liste.update({kelime:paragraf.count(kelime)}) for kelime in paragraf  if kelime.startswith("b") ]
+[liste.update({kelime:paragraf.count(kelime)}) for kelime in paragraf ]
 
 #alfabetik liste
 
