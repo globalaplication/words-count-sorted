@@ -1,18 +1,13 @@
 
+
+string = """bir internet sitesinin ihtiyaçlarını karşılamak bu isteyen hosting firmalarının olması ve bu firmaların, isteklerinize en doğru cevapları veriyor olmaları nedeni ile sizlerde siteleriniz için en iyi sunuculardan yerinizi alabilir"""
+
 liste = dict()
 
-#paragrafı oku, kelimelere ayır.
+[liste.update({kelime:string.count(kelime)}) for kelime in string.split()]
 
-paragraf = open("paragraf").read().split()
+test = [test for test in sorted(liste.items(), key = lambda x : x[1], reverse=True)]
 
-#kelimeleri say, sozluge ekle {"bilgisayar":5}
+#print( help( sorted(liste.items()) ))
 
-[liste.update({kelime:paragraf.count(kelime)}) for kelime in paragraf ]
-
-#alfabetik liste
-
-alfabetik = [alfabetik for alfabetik in sorted(liste.items())]
-
-#çıktı
-
-print (alfabetik)
+print(liste.items())
